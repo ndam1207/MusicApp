@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.android.musicapp.fragments.AllMusicFragment;
-import com.example.android.musicapp.fragments.DownloadMusicFragment;
-import com.example.android.musicapp.fragments.FavoriteMusicFragment;
+import com.example.android.musicapp.fragments.MusicTypeFragment;
+import com.example.android.musicapp.fragments.DownloadFragment;
+import com.example.android.musicapp.fragments.FavoriteFragment;
 
 /**
  * Created by valky on 7/17/2017.
@@ -22,13 +22,13 @@ public class PageAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new AllMusicFragment();
+                fragment = new MusicTypeFragment();
                 break;
             case 1:
-                fragment = new FavoriteMusicFragment();
+                fragment = new FavoriteFragment();
                 break;
             case 2:
-                fragment = new DownloadMusicFragment();
+                fragment = new DownloadFragment();
                 break;
         }
 

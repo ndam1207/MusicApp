@@ -13,13 +13,13 @@ import com.example.android.musicapp.R;
  * Created by valky on 7/17/2017.
  */
 
-public class AllMusicFragment extends Fragment {
-    public AllMusicFragment() {
+public class DownloadFragment extends Fragment {
+    public DownloadFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.all_music_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_download, container, false);
     }
 }

@@ -27,24 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        GetMusicTypes getMusicTypes = RetrofitFactory
-//                .getInstance().create(GetMusicTypes.class);
-//
-//        getMusicTypes.getMusicTypes().enqueue(new Callback<AllMusicTypesJSONModel>() {
-//            @Override
-//            public void onResponse(Call<AllMusicTypesJSONModel> call, Response<AllMusicTypesJSONModel> response) {
-//                for (MusicTypeJSONModel musicTyoeJSONMOdel:response.body().getSubgenres()){
-//                    Log.d("KIEMTRA",musicTyoeJSONMOdel.getId());
-//                    Log.d("KIEMTRA",musicTyoeJSONMOdel.getTranslation_key());
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<AllMusicTypesJSONModel> call, Throwable t) {
-//                Toast.makeText(MainActivity.this, "404: Not Found!", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
