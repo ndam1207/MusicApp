@@ -70,4 +70,18 @@ public class MainActivity extends AppCompatActivity {
         tab.getTabAt(1).getIcon().setAlpha(100);
         tab.getTabAt(2).getIcon().setAlpha(100);
     }
+
+    @Override
+    public void onBackPressed() {
+
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            super.onBackPressed();
+        }
+        else {
+            getFragmentManager().popBackStack();
+        }
+
+    }
 }

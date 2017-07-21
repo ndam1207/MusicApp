@@ -99,6 +99,6 @@ public class MusicTypeFragment extends Fragment implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         MusicTypeModel musicTypeModel = (MusicTypeModel) v.getTag();
-       // ScreenManager.openFragment(getActivity().getSupportFragmentManager(), R.id.layout_container, new TopSongFragment());
+        ScreenManager.openFragment(getActivity().getSupportFragmentManager(), new TopSongFragment(),  R.id.layout_container, this, musicTypeModel);
 }
 }

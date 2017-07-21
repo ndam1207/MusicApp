@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="80dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
 
     <ImageView
         android:scaleType="centerCrop"
-        android:id="@+id/item_top_song_background"
+        android:id="@+id/iv_item_top_song_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -20,7 +24,26 @@
         android:layout_marginRight="30dp"/>
     
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/iv_item_top_song_icon"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="That's what I like"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/iv_item_top_song_icon"
+        android:layout_below="@id/tv_title"
+        android:id="@+id/tv_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="0dp"
+        android:text="KIDZ BOP Kids"
+        android:textColor="#7cffffff"
         />
 </RelativeLayout>
