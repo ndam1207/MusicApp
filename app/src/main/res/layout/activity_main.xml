@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.musicapp.MainActivity">
+    android:background="@color/colorPrimary"
+    tools:context="techkids.vn.demoretrofitgen9.MainActivity">
 
     <RelativeLayout
         android:id="@+id/layout_container"
@@ -12,30 +13,103 @@
         android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/tb_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:title="Free Music" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_arrow_back_black_24dp"/>
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/tl_choices"
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorPrimary"
-        android:layout_below="@+id/toolbar"
-        android:minHeight="?attr/actionBarSize"
-        app:tabIndicatorColor="@color/colorAccent" />
+        android:layout_below="@id/tb_main"
+        android:background="@color/colorPrimary" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/vp_content"
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tl_choices"
-        android:background="@color/colorPrimary"/>
+        android:layout_below="@id/tab_layout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_above="@+id/layout_container"
+        android:id="@+id/rl_mini_player"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:elevation="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <SeekBar
+            android:id="@+id/sb_mini_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            />
+        
+        <ImageView
+            android:id="@+id/iv_song_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/sb_mini_player"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_toRightOf="@id/iv_song_image"
+            android:id="@+id/tv_song_title"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="In the End"
+            android:ellipsize="end"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@id/sb_mini_player"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:maxLines="1"
+            android:layout_toRightOf="@id/iv_song_image"
+            android:id="@+id/tv_song_author"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:text="Linkin Park"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:layout_below="@+id/tv_song_title"
+            android:layout_alignStart="@+id/tv_song_title"
+            android:textAllCaps="true"/>
+        
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fb_mini"
+            android:layout_below="@id/sb_mini_player"
+            android:layout_toRightOf="@id/tv_song_title"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/ic_play_circle_filled_black_24dp"
+            />
+
     </RelativeLayout>
 
 
